@@ -1,0 +1,34 @@
+Fila:
+Uma estrutura onde as mensagens são armazenadas temporariamente até que sejam processadas. Funciona em uma lógica FIFO, ou seja, as primeiras mensagens que entram na fila são as primeiras a serem processadas. As filas de mensagens permitem que diferentes partes de um sistema se comuniquem e processem operações de forma assíncrona.
+
+Produtor:
+É o responsável por enviar mensagens para uma fila. O produtor gera as mensagens e as encaminha para o sistema de mensageria, que as distribui para os consumidores.
+
+Consumidor:
+O consumidor recebe e processa as mensagens da fila. Ele pode ser configurado para consumir mensagens assim que estiverem disponíveis ou em intervalos específicos.
+
+Tópicos:
+Um tópico permite a publicação de mensagens que podem ser consumidas por vários consumidores simultaneamente. Diferente das filas, onde uma mensagem é entregue a um único consumidor, em tópicos várias cópias da mensagem são distribuídas.
+
+Partições:
+Partições permitem que os dados em um tópico sejam distribuídos entre diferentes segmentos para aumentar a paralelização e o desempenho. Cada partição pode ser processada por um consumidor diferente, permitindo maior escalabilidade.
+
+
+
+RabbitMQ:
+
+	Características: É um servidor de mensageria de código aberto,  implementado para suportar mensagens em um protocolo denominado Advanced Message Queuing                          Protocol (AMQP)
+
+	Casos de Uso: RabbitMQ é ideal para aplicações que requerem roteamento complexo, entrega garantida de mensagens e integração com sistemas legados. É amplamente                       utilizado em sistemas de processamento de tarefas assíncronas e em arquiteturas de microsserviços.
+
+BullMQ:
+
+	Características: Suporte a priorização de tarefas, repetição de tarefas, agendamento e concorrência controlada.
+
+	Casos de Uso: BullMQ é recomendado para tarefas assíncronas em aplicações Node.js. É adequado para gerenciamento de filas de trabalho com balanceamento de                       carga.
+
+Kafka:
+	
+	Características: O BullMQ é uma biblioteca em Node.js que implementa uma fila de mensagens baseada em Redis. Ele permite a criação de trabalhos que podem ser                          processados assincronamente
+
+	Casos de Uso: Kafka é ideal para pipelines de dados em tempo real, monitoramento de eventos em larga escala e ingestão de dados. É amplamente utilizado em                            sistemas de big data, sistemas bancários e telecomunicações.
